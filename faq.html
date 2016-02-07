@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Frequently asked questions from SAP employees</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sap.css" rel="stylesheet">
+
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!--<link href="blog.css" rel="stylesheet"> -->
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+      <div class="header-sap"></div>
+
+      <div class="container">
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h1 class="blog-post-title">Frequently asked questions for SAP employees</h1>
+            <p class="blog-post-meta">May 20, 2014 by <a href="https://github.com/IngoS11">Ingo</a></p>
+            <p>This FAQ tries to answer common questions SAP employees have when they  want to or are already in the process of publishing an Open Source project on sap.github.io. The page is intended to help get an overview of what is needed by SAP as a company and/or is common best practices for open source projects.</p>
+            <hr>
+
+            <h3>- What do I need to do to open source my project</h3>
+            <p>If you are an SAP group or employee and are interested in making your SAP project open source you have to go through the SAP Outbound Open Source Process. The process is described on the intranet Open Source pages of SAP @ <a href="https://community.wdf.sap.corp/groups/open-source">https://community.wdf.sap.corp/groups/open-source</a>, accessible from within the SAP corporate network only.</p>
+
+
+            <h3>- Who do I contact for a repository?</h3>
+            <p>The complete list of administrators for sap.github.io can be found @ <a href="https://github.com/orgs/SAP/teams/owners"> https://github.com/orgs/SAP/teams/owners</a> provided that you are logged-in into GitHub. While you are able to send either one of them a request in most cases you want to contact: 
+            <ul>
+              <li>Matthias <a href="https://github.com/steinermatt" ></a> for SAP Hana Cloud based projects</li>
+              <li>Ingo <a href="https://github.com/IngoS11" ></a> for everything else</li>
+            </ul>
+            Also if you have questions in general you can send an email to the SAP Developer Center email to <img src="img/where-to-go.PNG" alt="Developer Center email address">.</p>
+          
+            <h3>- What do I have to have, can have, or should not have in my repository?</h3>
+            <p>We do not request much. Outside of keeping your repository clean and understandable for people we would like every repository owner to have:
+            <ul>
+              <li>A Readme.md file describing the project <a href="https://github.com/SAP/node-hdb/blob/master/README.md"/>(HANA node.js driver example).</a></li>
+              <li>The license agreement for the project approved through the Outbound Open Source Process has to be inside the top folder of your repository and be named LICENSE.</li>
+              <li>Include all required notices for all third party open source components that are included in the project (this does not apply to dependencies, only third party components that can be downloaded from the project).</li>
+            </ul><p>
+            Outside of that we do not have any other requirements. What you could think of is:
+            <ul>
+              <li>Have the admins activate the wiki pages for your repository</li>
+              <li>Put up pages for support on StackOverflow <a href="http://stackoverflow.com/questions/tagged/sapui5">(OpenUI5 example)</a> or the SAP Coummunity Network forums <a href="http://scn.sap.com/community/developer-center/front-end/content">(OpenUI5 example)</a></li>
+              <li>Maintain pages for your project on GitHub like the OpenUI5 have done it with the <a href="https://pages.github.com/">gh-pages capability of GitHub</a>.</li>
+            </ul>
+            Finally what we do not want you to do is:
+            <ul>
+              <li>Never store libraries your project depends on and that are not part of your project inside your repository. Either explain how to assemble what is needed in the Readme.md or on help pages.Some languages allow you to make references to the libraries in build files that are resolved during build time. If the language or environment you use has this option consider using it.</li>
+              <li>Never add any source or compiled code of SAP that is not part of your project inside your repository. Also make sure that all files inside your repository are subject to or compliant with the project's license agreement (store in the top folder as noted above).</li>
+            </ul>
+            </p>
+          
+            <h3>- Where do I put the open source license?</h3>
+            <p>The complete license agreement of the respective license should be inside the top folder of your repository and the file should be named LICENSE. Many open source licenses have short version headers for every source code file inside the project and you may want to consider adding this header to the source files.</p>
+
+            <h3>- What name can I give to my repository?</h3>
+            <p>In the past we used to put projects into categories like cloud, mobile, data and UI and organized the projects in that manner on the main page of sap.github.io. To support this structure, we had started a naming convention that a repository name starts with the category name. But since we have been receiving projects that do not fit these categories, we decided to drop this convention altogether. At this point the simple rule is that the name should be descriptive should not be used already at sap.github.io.</p>
+
+
+            <h3>- Can I make use of my existing user account at github?</h3>
+            <p>Yes, you can use an existing GitHub user to participate or manage an open source project on sap.github.io. We do suggest that you add your sap corporate email address to that user for communication purposes and make that email address the primary GitHub email if possible.</a>
+
+
+            <h3>- What email address should I use?</h3>
+            <p>SAP suggest that you use your corporate email address as the default email as the primary communication email inside your GitHub user you use to work on an Open Source project hosted on sap.github.io</p>
+
+            <h3>- How should I handle pull requests from non-sap employees?</h3>
+            <p>SAP requires everyone contributing to an SAP led open source project hosted on sap.github.io to sign a <a href="sap_icla_v7.pdf">Individual Contributor License Agreement (ICLA)</a>. If the contributor is made on behalf of a corporation then a Corporate Contributor License Agreement should be signed by the corporation, however, this does not remove the requirement for every individual contributor representing the corporation to sign an ICLA. The project lead is responsible for obtaining signatures and storing the documents. Once signatures are obtained pull requests can be accepted.</p>
+          </div>
+
+          <!-- <ul class="pager">
+            <li><a href="#">Previous</a></li>
+            <li><a href="#">Next</a></li>
+          </ul> -->
+
+        </div><!-- /.blog-main -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+  </body>
+</html>
